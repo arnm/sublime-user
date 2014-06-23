@@ -1,0 +1,32 @@
+{
+	"color_scheme": "Packages/Theme - Flatland/Flatland Dark.tmTheme",
+	"ensure_newline_at_eof_on_save": true,
+	"font_options":
+	[
+		"subpixel_antialias"
+	],
+	"font_size": 18,
+	"font_face": "Consolas",
+	"ignored_packages":
+	[
+		"SideBarEnhancements",
+		"Markdown",
+		"Vintage"
+	],
+	"inverse_caret_state": true,
+	"line_padding_bottom": 0,
+	"line_padding_top": 0,
+	"match_brackets": false,
+	"rulers":
+	[
+		80
+	],
+	"soda_folder_icons": true,
+	"tab_size": 2,
+	"theme": "Flatland Dark.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
+	"vintage_start_in_command_mode": true,
+	"vintageous_use_ctrl_keys": true,
+	"word_wrap": true
+}

@@ -1,0 +1,19 @@
+{
+	"installed_packages":
+	[
+		"AdvancedNewFile",
+		"All Autocomplete",
+		"BracketHighlighter",
+		"GitGutter",
+		"lispindent",
+		"Load file to REPL",
+		"Origami",
+		"PackageResourceViewer",
+		"paredit",
+		"SideBarEnhancements",
+		"SublimeREPL",
+		"Theme - Flatland",
+		"Vintageous",
+		"Wombat Theme"
+	]
+}
