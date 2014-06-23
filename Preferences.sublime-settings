@@ -1,17 +1,17 @@
 {
 	"color_scheme": "Packages/Theme - Flatland/Flatland Dark.tmTheme",
 	"ensure_newline_at_eof_on_save": true,
+	"font_face": "Consolas",
 	"font_options":
 	[
 		"subpixel_antialias"
 	],
 	"font_size": 18,
-	"font_face": "Consolas",
 	"ignored_packages":
 	[
-		"SideBarEnhancements",
 		"Markdown",
-		"Vintage"
+		"Vintage",
+		"SideBarEnhancements"
 	],
 	"inverse_caret_state": true,
 	"line_padding_bottom": 0,
