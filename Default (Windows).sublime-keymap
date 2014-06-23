@@ -1,0 +1,489 @@
+[
+    // Movement Bindings -------------------------------------------------------
+
+    // normal mode movement keys
+    {
+        "keys": ["j"],
+        "command": "move",
+        "args": {
+            "by": "characters",
+            "forward": false
+        },
+        "context": [{
+            "key": "vi_mode_normal"
+        }]
+    }, {
+        "keys": ["k"],
+        "command": "move",
+        "args": {
+            "by": "lines",
+            "forward": true
+        },
+        "context": [{
+            "key": "vi_mode_normal"
+        }]
+    }, {
+        "keys": ["l"],
+        "command": "move",
+        "args": {
+            "by": "lines",
+            "forward": false
+        },
+        "context": [{
+            "key": "vi_mode_normal"
+        }]
+    },
+    {
+        "keys": [";"],
+        "command": "move",
+        "args": {
+            "by": "characters",
+            "forward": true
+        },
+        "context": [{
+            "key": "vi_mode_normal"
+        }]
+    },
+
+        // normal mode movement keys
+    {
+        "keys": ["j"],
+        "command": "press_key",
+        "args": {
+            "key": "h"
+        },
+        "context": [{
+            "key": "vi_mode_visual"
+        }]
+    }, {
+        "keys": ["k"],
+        "command": "press_key",
+        "args": {
+            "key": "j"
+        },
+        "context": [{
+            "key": "vi_mode_visual"
+        }]
+    }, {
+        "keys": ["l"],
+        "command": "press_key",
+        "args": {
+            "key": "k"
+        },
+        "context": [{
+            "key": "vi_mode_visual"
+        }]
+    },
+    {
+        "keys": [";"],
+        "command": "press_key",
+        "args": {
+            "key": "l"
+        },
+        "context": [{
+            "key": "vi_mode_visual"
+        }]
+    },
+
+    // insert mode movement keys
+
+    {
+        "keys": ["ctrl+j"],
+        "command": "move",
+        "args": {
+            "by": "characters",
+            "forward": false
+        },
+        "context": [{
+            "key": "vi_mode_insert"
+        }]
+    },
+
+    {
+        "keys": ["ctrl+k"],
+        "command": "move",
+        "args": {
+            "by": "lines",
+            "forward": true
+        },
+        "context": [{
+            "key": "vi_mode_insert"
+        }]
+    },
+
+    {
+        "keys": ["ctrl+l"],
+        "command": "move",
+        "args": {
+            "by": "lines",
+            "forward": false
+        },
+        "context": [{
+            "key": "vi_mode_insert"
+        }]
+    },
+
+    {
+        "keys": ["ctrl+;"],
+        "command": "move",
+        "args": {
+            "by": "characters",
+            "forward": true
+        },
+        "context": [{
+            "key": "vi_mode_insert"
+        }]
+    },
+
+    // Origami Window Bindings -------------------------------------------------
+
+    // horizontal split
+    {
+        "keys": [",", "s"],
+        "command": "create_pane",
+        "args": {
+            "direction": "down"
+        },
+        "context": [{
+            "key": "vi_mode_normal"
+        }]
+    },
+
+    // vertical split
+    {
+        "keys": [",", "v"],
+        "command": "create_pane",
+        "args": {
+            "direction": "right"
+        },
+        "context": [{
+            "key": "vi_mode_normal"
+        }]
+    },
+
+    // destroy pane
+    {
+        "keys": [",", "d"],
+        "command": "destroy_pane",
+        "args": {
+            "direction": "self"
+        },
+        "context": [{
+            "key": "vi_mode_normal"
+        }]
+    },
+
+    // pane navigation
+    {
+        "keys": ["ctrl+j"],
+        "command": "travel_to_pane",
+        "args": {
+            "direction": "left"
+        },
+        "context": [{
+            "key": "vi_mode_normal"
+        }]
+    },
+
+    {
+        "keys": ["ctrl+k"],
+        "command": "travel_to_pane",
+        "args": {
+            "direction": "down"
+        },
+        "context": [{
+            "key": "vi_mode_normal"
+        }]
+    },
+
+    {
+        "keys": ["ctrl+l"],
+        "command": "travel_to_pane",
+        "args": {
+            "direction": "up"
+        },
+        "context": [{
+            "key": "vi_mode_normal"
+        }]
+    },
+
+    {
+        "keys": ["ctrl+;"],
+        "command": "travel_to_pane",
+        "args": {
+            "direction": "right"
+        },
+        "context": [{
+            "key": "vi_mode_normal"
+        }]
+    },
+
+    // file carry
+
+    {
+        "keys": ["alt+j"],
+        "command": "carry_file_to_pane",
+        "args": {
+            "direction": "left"
+        },
+        "context": [{
+            "key": "vi_mode_normal"
+        }]
+    },
+
+    {
+        "keys": ["alt+k"],
+        "command": "carry_file_to_pane",
+        "args": {
+            "direction": "down"
+        },
+        "context": [{
+            "key": "vi_mode_normal"
+        }]
+    },
+
+    {
+        "keys": ["alt+l"],
+        "command": "carry_file_to_pane",
+        "args": {
+            "direction": "up"
+        },
+        "context": [{
+            "key": "vi_mode_normal"
+        }]
+    },
+
+    {
+        "keys": ["alt+;"],
+        "command": "carry_file_to_pane",
+        "args": {
+            "direction": "right"
+        },
+        "context": [{
+            "key": "vi_mode_normal"
+        }]
+    },
+
+    // Find Bindings -----------------------------------------------------------
+
+    {
+        "keys": ["ctrl+h"],
+        "command": "find_under_expand",
+        "context": [{
+            "key": "vi_mode_normal"
+        }]
+    },
+
+    {
+        "keys": ["ctrl+g"],
+        "command": "find_all_under",
+        "context": [{
+            "key": "vi_mode_normal"
+        }]
+    },
+
+    // Action Bindings ---------------------------------------------------------
+
+    // exit insert mode
+    {
+        "keys": ["j", "j"],
+        "command": "_enter_normal_mode",
+        "args": {
+            "mode": "mode_insert"
+        },
+        "context": [{
+            "key": "vi_insert_mode_aware"
+        }]
+    },
+
+    // write buffer
+    {
+        "keys": [",", "w"],
+        "command": "save",
+        "context": [{
+            "key": "vi_mode_normal"
+        }]
+    },
+
+    // close buffer
+    {
+        "keys": [",", "c"],
+        "command": "close",
+        "context": [{
+            "key": "vi_mode_normal"
+        }]
+    },
+
+    // quit program
+    {
+        "keys": [",", "q"],
+        "command": "exit",
+        "context": [{
+            "key": "vi_mode_normal"
+        }]
+    },
+
+    // open file
+    {
+        "keys": [",", "o"],
+        "command": "prompt_open",
+        "context": [{
+            "key": "vi_mode_normal"
+        }]
+    },
+
+    // toggle sidebar
+    {
+        "keys": [",", "t", "b"],
+        "command": "toggle_side_bar",
+        "context": [{
+            "key": "vi_mode_normal"
+        }]
+    },
+
+    // toggle minimap
+    {
+        "keys": [",", "t", "m"],
+        "command": "toggle_minimap",
+        "context": [{
+            "key": "vi_mode_normal"
+        }]
+    },
+
+    // Project Bindings --------------------------------------------------------
+
+    // create new project
+    {
+        "keys": [",", "p", "n"],
+        "command": "prompt_open_project_or_workspace",
+        "context": [{
+            "key": "vi_mode_normal"
+        }]
+    },
+
+    // select project
+    {
+        "keys": [",", "p", "s"],
+        "command": "prompt_select_workspace",
+        "context": [{
+            "key": "vi_mode_normal"
+        }]
+    },
+
+    // save project as
+    {
+        "keys": [",", "p", "w"],
+        "command": "save_project_and_workspace_as",
+        "context": [{
+            "key": "vi_mode_normal"
+        }]
+    },
+
+    // add folder to project
+    {
+        "keys": [",", "p", "a"],
+        "command": "prompt_add_folder",
+        "context": [{
+            "key": "vi_mode_normal"
+        }]
+    },
+
+    // Overlay Bindings --------------------------------------------------------
+
+    // go to anything
+    {
+        "keys": [",", "b"],
+        "command": "show_overlay",
+        "args": {
+            "overlay": "goto",
+            "show_files": true
+        }
+    },
+
+    // command palette
+    {
+        "keys": [",", "e"],
+        "command": "show_overlay",
+        "args": {
+            "overlay": "command_palette"
+        }
+    },
+
+    // Panel Bindings ----------------------------------------------------------
+
+    // console pane
+    {
+        "keys": [",", "k"],
+        "command": "show_panel",
+        "args": {
+            "panel": "console"
+        }
+    },
+
+    // Bracket Highlighter Bindings --------------------------------------------
+
+    // swap bracket type
+    {
+        "keys": [",", "s", "b"],
+        "command": "swap_brackets",
+        "context": [{
+            "key": "vi_mode_normal_or_visual"
+        }]
+    },
+
+    // select inner bracket text
+    {
+        "keys": ["i", "b"],
+        "command": "bh_key",
+        "args": {
+            "lines": true,
+            "plugin": {
+                "type": ["__all__"],
+                "command": "bh_modules.bracketselect"
+            }
+        },
+        "context": [{
+            "key": "vi_mode_visual"
+        }]
+    },
+
+    // swap quotes
+    {
+        "keys": [",", "s", "q"],
+        "command": "bh_key",
+        "args": {
+            "lines": true,
+            "plugin": {
+                "type": [
+                    "single_quote",
+                    "double_quote",
+                ],
+                "command": "bh_modules.swapquotes"
+            }
+        },
+        "context": [{
+            "key": "vi_mode_normal_or_visual"
+        }]
+    },
+
+    // toggle high visibility mode
+    {
+        "keys": [",", "t", "v"],
+        "command": "bh_toggle_high_visibility",
+        "context": [{
+            "key": "vi_mode_normal_or_visual"
+        }]
+    },
+
+    // SublimeREPL Bindings ----------------------------------------------------
+
+    // load current file to repl
+    {
+        "keys": [",", "r", "l"],
+        "command": "load_file_to_repl",
+        "context": [{
+            "key": "vi_mode_normal_or_visual"
+        }]
+    }
+
+]
