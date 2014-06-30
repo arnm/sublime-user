@@ -3,3 +3,5 @@
 /.SublimeREPLHistory/
 /Package Control.cache/
 *.system-ca-bundle
+/GoSublime/
+/GoSublime-aux.sublime-settings
