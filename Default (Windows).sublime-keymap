@@ -286,7 +286,7 @@
 
     // exit insert mode
     {
-        "keys": ["j", "j"],
+        "keys": ["j", "k"],
         "command": "_enter_normal_mode",
         "args": {
             "mode": "mode_insert"
@@ -318,6 +318,15 @@
     {
         "keys": [",", "q"],
         "command": "exit",
+        "context": [{
+            "key": "vi_mode_normal"
+        }]
+    },
+
+    // new file
+    {
+        "keys": [",", "n"],
+        "command": "new_file",
         "context": [{
             "key": "vi_mode_normal"
         }]
@@ -365,6 +374,15 @@
     {
         "keys": [",", "p", "s"],
         "command": "prompt_select_workspace",
+        "context": [{
+            "key": "vi_mode_normal"
+        }]
+    },
+
+    // select project
+    {
+        "keys": [",", "p", "c"],
+        "command": "close_workspace",
         "context": [{
             "key": "vi_mode_normal"
         }]
@@ -477,6 +495,23 @@
 
     // SublimeREPL Bindings ----------------------------------------------------
 
+    // clear repl
+    {
+        "keys": [",", "r", "c"],
+        "command": "repl_clear",
+        "context":
+        [
+            {
+                "key": "setting.repl",
+                "operator": "equal",
+                "operand": true
+            },
+            {
+                "key": "vi_mode_normal_or_visual"
+            }
+        ]
+    },
+
     // load current file to repl
     {
         "keys": [",", "r", "l"],
@@ -484,6 +519,46 @@
         "context": [{
             "key": "vi_mode_normal_or_visual"
         }]
-    }
+    },
 
+    // eval block in repl
+    {
+        "keys": [",", "r", "b"],
+        "command": "repl_transfer_current",
+        "args": {
+            "scope": "block"
+        },
+        "context": [{
+            "key": "vi_mode_normal"
+        }]
+    },
+
+    // eval block in repl
+    {
+        "keys": [",", "r", "s"],
+        "command": "repl_transfer_current",
+        "args": {
+            "scope": "selection"
+        },
+        "context": [{
+            "key": "vi_mode_normal_or_visual"
+        }]
+    },
+
+    // Language Specific -------------------------------------------------------
+
+    // Clojure
+    {
+        "keys": ["'"],
+        "command": "insert_snippet",
+        "args": {
+            "contents": "'"
+        },
+        "context": [{
+                "key": "selector",
+                "operator": "equal",
+                "operand": "source.clojure"
+            }
+        ]
+    },
 ]

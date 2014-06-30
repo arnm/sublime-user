@@ -286,7 +286,7 @@
 
     // exit insert mode
     {
-        "keys": ["j", "j"],
+        "keys": ["j", "k"],
         "command": "_enter_normal_mode",
         "args": {
             "mode": "mode_insert"
@@ -318,6 +318,15 @@
     {
         "keys": [",", "q"],
         "command": "exit",
+        "context": [{
+            "key": "vi_mode_normal"
+        }]
+    },
+
+    // new file
+    {
+        "keys": [",", "n"],
+        "command": "new_file",
         "context": [{
             "key": "vi_mode_normal"
         }]
