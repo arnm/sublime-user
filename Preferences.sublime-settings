@@ -9,9 +9,8 @@
 	"font_size": 17,
 	"ignored_packages":
 	[
-		"Vintage",
-		"SideBarEnhancements",
-		"Markdown"
+		"Markdown",
+		"Vintage"
 	],
 	"inverse_caret_state": true,
 	"line_padding_bottom": 0,
