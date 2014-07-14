@@ -45,7 +45,7 @@
         }]
     },
 
-        // normal mode movement keys
+    // normal mode movement keys
     {
         "keys": ["j"],
         "command": "press_key",
@@ -343,7 +343,7 @@
 
     // toggle sidebar
     {
-        "keys": [",", "t", "b"],
+        "keys": [",", "t", "s"],
         "command": "toggle_side_bar",
         "context": [{
             "key": "vi_mode_normal"
@@ -359,6 +359,29 @@
         }]
     },
 
+    // toggle comment block
+    {
+        "keys": [",", "t", "b"],
+        "command": "toggle_comment",
+        "args": {
+            "block": true
+        },
+        "context": [{
+            "key": "vi_mode_visual"
+        }]
+    },
+
+    // toggle comment
+    {
+        "keys": [",", "t", "c"],
+        "command": "toggle_comment",
+        "args": {
+            "block": false
+        },
+        "context": [{
+            "key": "vi_mode_normal_or_visual"
+        }]
+    },
     // Project Bindings --------------------------------------------------------
 
     // create new project
