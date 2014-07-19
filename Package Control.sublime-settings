@@ -7,6 +7,8 @@
 		"GitGutter",
 		"GoSublime",
 		"Jedi - Python autocompletion",
+		"JsFormat",
+		"JSLint",
 		"lispindent",
 		"Load file to REPL",
 		"Markdown Preview",
