@@ -32,8 +32,7 @@
         "context": [{
             "key": "vi_mode_normal"
         }]
-    },
-    {
+    }, {
         "keys": [";"],
         "command": "move",
         "args": {
@@ -45,7 +44,7 @@
         }]
     },
 
-    // normal mode movement keys
+    // visual mode movement keys
     {
         "keys": ["j"],
         "command": "press_key",
@@ -73,8 +72,7 @@
         "context": [{
             "key": "vi_mode_visual"
         }]
-    },
-    {
+    }, {
         "keys": [";"],
         "command": "press_key",
         "args": {
@@ -522,17 +520,13 @@
     {
         "keys": [",", "r", "c"],
         "command": "repl_clear",
-        "context":
-        [
-            {
-                "key": "setting.repl",
-                "operator": "equal",
-                "operand": true
-            },
-            {
-                "key": "vi_mode_normal_or_visual"
-            }
-        ]
+        "context": [{
+            "key": "setting.repl",
+            "operator": "equal",
+            "operand": true
+        }, {
+            "key": "vi_mode_normal_or_visual"
+        }]
     },
 
     // load current file to repl
@@ -578,10 +572,9 @@
             "contents": "'"
         },
         "context": [{
-                "key": "selector",
-                "operator": "equal",
-                "operand": "source.clojure"
-            }
-        ]
+            "key": "selector",
+            "operator": "equal",
+            "operand": "source.clojure"
+        }]
     },
 ]

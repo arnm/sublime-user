@@ -1,31 +1,37 @@
 {
-	"color_scheme": "Packages/User/Flatland Dark.tmTheme",
+	"caret_extra_width": 2,
+	"caret_style": "phase",
+	"close_windows_when_empty": false,
+	"color_scheme": "Packages/Predawn/predawn.tmTheme",
+	"drag_text": false,
+	"highlight_line": true,
+	"draw_minimap_border": true,
 	"ensure_newline_at_eof_on_save": true,
-	"font_face": "Monaco",
-	"font_options":
-	[
-		"subpixel_antialias"
+	"font_face": "Meslo LG S",
+	"font_options": [
+		"subpixel_antialias",
+		"no_round"
 	],
-	"font_size": 17,
-	"ignored_packages":
-	[
-		"Vintage",
-		"Markdown"
+	"font_size": 18,
+	"ignored_packages": [
+		"Markdown",
+		"Vintage"
 	],
-	"inverse_caret_state": true,
 	"line_padding_bottom": 0,
 	"line_padding_top": 0,
 	"match_brackets": false,
-	"rulers":
-	[
+	"rulers": [
 		80
 	],
-	"soda_folder_icons": true,
+	"scroll_past_end": false,
+	"scroll_speed": 2.0,
 	"tab_size": 2,
-	"theme": "Flatland Dark.sublime-theme",
+	"tabs_small": true,
+	"theme": "predawn.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"vintage_start_in_command_mode": true,
 	"vintageous_use_ctrl_keys": true,
-	"word_wrap": true
+	"word_wrap": true,
+	"overlay_scroll_bars": "disabled",
 }
