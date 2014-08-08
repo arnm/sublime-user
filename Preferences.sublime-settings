@@ -2,36 +2,40 @@
 	"caret_extra_width": 2,
 	"caret_style": "phase",
 	"close_windows_when_empty": false,
-	"color_scheme": "Packages/Predawn/predawn.tmTheme",
+	"color_scheme": "Packages/Theme - Spacegray/base16-ocean.dark.tmTheme",
 	"drag_text": false,
-	"highlight_line": true,
 	"draw_minimap_border": true,
 	"ensure_newline_at_eof_on_save": true,
 	"font_face": "Meslo LG S",
-	"font_options": [
+	"font_options":
+	[
 		"subpixel_antialias",
 		"no_round"
 	],
 	"font_size": 18,
-	"ignored_packages": [
-		"Markdown",
-		"Vintage"
+	"highlight_line": true,
+	"ignored_packages":
+	[
+		"Vintage",
+		"Markdown"
 	],
 	"line_padding_bottom": 0,
 	"line_padding_top": 0,
 	"match_brackets": false,
-	"rulers": [
+	"rulers":
+	[
 		80
 	],
 	"scroll_past_end": false,
 	"scroll_speed": 2.0,
+	"spacegray_sidebar_font_xlarge": true,
+	"spacegray_tabs_large": true,
 	"tab_size": 2,
 	"tabs_small": true,
-	"theme": "predawn.sublime-theme",
+	"theme": "Spacegray.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"vintage_start_in_command_mode": true,
 	"vintageous_use_ctrl_keys": true,
-	"word_wrap": true,
-	"overlay_scroll_bars": "disabled",
+	"word_wrap": true
 }
