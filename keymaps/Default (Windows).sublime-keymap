@@ -32,8 +32,7 @@
         "context": [{
             "key": "vi_mode_normal"
         }]
-    },
-    {
+    }, {
         "keys": [";"],
         "command": "move",
         "args": {
@@ -45,7 +44,7 @@
         }]
     },
 
-        // normal mode movement keys
+    // visual mode movement keys
     {
         "keys": ["j"],
         "command": "press_key",
@@ -73,8 +72,7 @@
         "context": [{
             "key": "vi_mode_visual"
         }]
-    },
-    {
+    }, {
         "keys": [";"],
         "command": "press_key",
         "args": {
@@ -218,8 +216,7 @@
         }]
     },
 
-    // file carry
-
+    // Buffer movement
     {
         "keys": ["alt+j"],
         "command": "carry_file_to_pane",
@@ -266,6 +263,7 @@
 
     // Find Bindings -----------------------------------------------------------
 
+    // find next of
     {
         "keys": ["ctrl+h"],
         "command": "find_under_expand",
@@ -274,6 +272,7 @@
         }]
     },
 
+    // find all of
     {
         "keys": ["ctrl+g"],
         "command": "find_all_under",
@@ -343,7 +342,7 @@
 
     // toggle sidebar
     {
-        "keys": [",", "t", "b"],
+        "keys": [",", "t", "s"],
         "command": "toggle_side_bar",
         "context": [{
             "key": "vi_mode_normal"
@@ -359,11 +358,34 @@
         }]
     },
 
+    // toggle comment block
+    {
+        "keys": [",", "t", "b"],
+        "command": "toggle_comment",
+        "args": {
+            "block": true
+        },
+        "context": [{
+            "key": "vi_mode_visual"
+        }]
+    },
+
+    // toggle comment
+    {
+        "keys": [",", "t", "c"],
+        "command": "toggle_comment",
+        "args": {
+            "block": false
+        },
+        "context": [{
+            "key": "vi_mode_normal_or_visual"
+        }]
+    },
     // Project Bindings --------------------------------------------------------
 
     // create new project
     {
-        "keys": [",", "p", "n"],
+        "keys": [",", "p", "o"],
         "command": "prompt_open_project_or_workspace",
         "context": [{
             "key": "vi_mode_normal"
@@ -379,7 +401,7 @@
         }]
     },
 
-    // select project
+    // close project
     {
         "keys": [",", "p", "c"],
         "command": "close_workspace",
@@ -410,7 +432,7 @@
 
     // go to anything
     {
-        "keys": [",", "b"],
+        "keys": [",", "g"],
         "command": "show_overlay",
         "args": {
             "overlay": "goto",
@@ -442,7 +464,7 @@
 
     // swap bracket type
     {
-        "keys": [",", "s", "b"],
+        "keys": [",", "b", "s"],
         "command": "swap_brackets",
         "context": [{
             "key": "vi_mode_normal_or_visual"
@@ -451,13 +473,33 @@
 
     // select inner bracket text
     {
-        "keys": ["i", "b"],
+        "keys": ["b", "i"],
         "command": "bh_key",
         "args": {
             "lines": true,
             "plugin": {
                 "type": ["__all__"],
                 "command": "bh_modules.bracketselect"
+            }
+        },
+        "context": [{
+            "key": "vi_mode_visual"
+        }]
+    },
+
+    // select outer bracket text
+    {
+        "keys": ["b", "o"],
+        "command": "bh_key",
+        "args": {
+            "no_outside_adj": true,
+            "lines": true,
+            "plugin": {
+                "type": ["__all__"],
+                "command": "bh_modules.bracketselect",
+                "args": {
+                    "always_include_brackets": true
+                }
             }
         },
         "context": [{
@@ -472,10 +514,7 @@
         "args": {
             "lines": true,
             "plugin": {
-                "type": [
-                    "single_quote",
-                    "double_quote",
-                ],
+                "type": ["single_quote", "double_quote", "py_single_quote", "py_double_quote"],
                 "command": "bh_modules.swapquotes"
             }
         },
@@ -493,23 +532,44 @@
         }]
     },
 
+    // Fold contents between brackets
+    {
+        "keys": [",", "f", "b"],
+        "command": "bh_key",
+        "args": {
+            "plugin": {
+                "type": ["__all__"],
+                "command": "bh_modules.foldbracket"
+            }
+        },
+
+        "context": [{
+            "key": "vi_mode_normal"
+        }]
+    },
+
+    // Surround selection with brackets from quick panel
+    {
+        "keys": [",", "d", "b"],
+        "command": "wrap_brackets",
+        "context": [{
+            "key": "vi_mode_normal"
+        }]
+    },
+
     // SublimeREPL Bindings ----------------------------------------------------
 
     // clear repl
     {
         "keys": [",", "r", "c"],
         "command": "repl_clear",
-        "context":
-        [
-            {
-                "key": "setting.repl",
-                "operator": "equal",
-                "operand": true
-            },
-            {
-                "key": "vi_mode_normal_or_visual"
-            }
-        ]
+        "context": [{
+            "key": "setting.repl",
+            "operator": "equal",
+            "operand": true
+        }, {
+            "key": "vi_mode_normal_or_visual"
+        }]
     },
 
     // load current file to repl
@@ -555,10 +615,9 @@
             "contents": "'"
         },
         "context": [{
-                "key": "selector",
-                "operator": "equal",
-                "operand": "source.clojure"
-            }
-        ]
+            "key": "selector",
+            "operator": "equal",
+            "operand": "source.clojure"
+        }]
     },
 ]
